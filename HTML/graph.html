@@ -25,10 +25,10 @@
 
         <div class="form">
             <div class="form-type">
-                <select id="form-type-2">
-                    <option selected>Undirected Unweighted Graph</option>
-                    <option>Directed Unweighted Graph</option>
-                    <option>Directed Weighted Graph</option>
+                <select id="form-type-2" onchange="verify(event)">
+                    <option value="uug" selected>Undirected Unweighted Graph</option>
+                    <option value="dug">Directed Unweighted Graph</option>
+                    <option value="dwg">Directed Weighted Graph</option>
                 </select>
             </div>
             <form>
@@ -38,10 +38,10 @@
                 <input id="nodes" name="nodes" type="text" required>
                 <label for="edges">Number of Edges *</label>
                 <input id="edges" name="edges" type="text" required>
-                <label for="min_wt">Minimum Weight</label>
-                <input id="min_wt" name="min_wt" type="text">
-                <label for="max_wt">Maximum Weight</label>
-                <input id="max_wt" name="max_wt" type="text">
+                <label for="min_wt" id="l_min" class="hidden">Minimum Weight</label>
+                <input id="min_wt" name="min_wt" type="text" class="hidden">
+                <label for="max_wt" id="l_max" class="hidden">Maximum Weight</label>
+                <input id="max_wt" name="max_wt" type="text" class="hidden">
                 <button type="submit" class="btn">Generate</button>
             </form>
         </div>
@@ -63,6 +63,28 @@
                     MenuItems.style.maxHeight = "200px"
                 } else {
                     MenuItems.style.maxHeight = "0px"
+                }
+            }
+
+            function verify(event) {
+                var value = event.target.value ;
+                let l_min = document.getElementById("l_min") ;
+                let min_wt = document.getElementById("min_wt") ;
+                let l_max = document.getElementById("l_max") ;
+                let max_wt = document.getElementById("max_wt") ;
+
+                if(value=="dwg"){
+                    l_min.style.display = "block" ;
+                    min_wt.style.display = "block" ;
+                    l_max.style.display = "block" ;
+                    max_wt.style.display = "block" ;    
+                }
+
+                else{
+                    l_min.style.display = "none" ;
+                    min_wt.style.display = "none" ;
+                    l_max.style.display = "none" ;
+                    max_wt.style.display = "none" ;
                 }
             }
         </script>

@@ -89,6 +89,10 @@ input{
     padding: 5px;
 }
 
+.hidden{
+    display: none;
+}
+
 .btn{
     background-color: #000;
     color: #fff;
@@ -97,9 +101,22 @@ input{
     font-size: 20px;
 }
 
+.btn:hover{
+    background-color: yellow;
+    color: #000;
+    font-weight: bold;
+}
+
 .download{
     background-color: rgb(8, 114, 25);
     margin-top: 20px;
+}
+
+.download:hover{
+    box-sizing: border-box;
+    box-shadow: yellow;
+    background-color: rgb(8, 114, 25);
+    color: #fff;
 }
 
 .result{
