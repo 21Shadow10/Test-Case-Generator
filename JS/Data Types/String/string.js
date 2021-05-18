@@ -1,6 +1,6 @@
-let size = 8;
-let chars = 'acsdfghjkl' ;
-let test = 5 ;
+let size = 5;
+let chars = 'rubtdyqlmn' ;
+let test = 3 ;
 
 const randstrgen=(size,chars)=>{
     var string = "";
@@ -19,6 +19,6 @@ function string(test, size, chars){
     return result;
 };
 
-//console.log(string(test,size,'')) ;
+// console.log(string(test,size,chars)) ;
 
 module.exports = string ;

@@ -1,10 +1,10 @@
 var randnumgen = require('../Integer/num');
 
-let nodes = 4 ;
-let edges = 6 ;
-let min_wt = 2 ;
-let max_wt = 8 ;
-let test = 2 ;
+let nodes = 5 ;
+let edges = 8 ;
+let min_wt = 5 ;
+let max_wt = 9 ;
+let test = 1 ;
 
 const randdwggen=(nodes,edges,min_weight,max_weight)=>{
 

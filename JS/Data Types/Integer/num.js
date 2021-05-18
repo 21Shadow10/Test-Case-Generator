@@ -1,6 +1,6 @@
-let min = 3 ;
-let max = 10 ;
-let test = 4 ;
+let min = 4 ;
+let max = 9 ;
+let test = 3 ;
 
 
 function num(test,min,max) {

@@ -2,7 +2,7 @@ var randnumgen = require('../Integer/num');
 
 var edges = 6 ;
 var nodes = 4;
-var test = 2 ;
+var test = 2;
 
 const randduggen=(nodes,edges)=>{
 

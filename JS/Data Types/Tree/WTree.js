@@ -1,9 +1,9 @@
 var randnumgen = require('../Integer/num');
 
 let nodes = 4 ;
-let min_wt = 3 ;
-let max_wt = 7;
-let test = 2 ;
+let min_wt = 2 ;
+let max_wt = 11;
+let test = 3 ;
 
 class Tree {
     constructor(nodes) {
@@ -64,6 +64,6 @@ function WTree(test, tree_nodes,wt_min_weight,wt_max_weight) {
     return result;
 }
 
-//console.log(WTree(test, nodes, min_wt, max_wt)) ;
+// console.log(WTree(test, nodes, min_wt, max_wt)) ;
 
 module.exports = WTree ;

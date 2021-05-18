@@ -1,7 +1,7 @@
 var num = require('../Integer/num');
 
-let nodes = 4;
-let test = 2 ;
+let nodes = 3;
+let test = 3 ;
 
 class Tree {
     constructor(nodes) {
@@ -60,6 +60,6 @@ function UWTree(test, tree_nodes) {
     return result;
 }
 
-//console.log(UWTree(test,nodes));
+// console.log(UWTree(test,nodes));
 
 module.exports = UWTree ;
