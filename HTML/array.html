@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css" >
+        <title>TestCase Generator</title>
+    </head>
+
+    <body>
+        <!-- Navigation Menu -->
+        <div class="navbar">
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="./integer.html">Integer</a></li>
+                    <li><a href="string.html">String</a></li>
+                    <li><a href="#" class="active">Array</a></li>
+                    <li><a href="./tree.html">Tree</a></li>
+                    <li><a href="./graph.html">Graph</a></li>
+                </ul>
+            </nav>
+            <img src="../menu.png" class="menu-icon" onclick="menuToggle()">
+        </div>
+
+
+        <div class="form">
+            <form>
+                <label for="test">Number of Test Cases *</label>
+                <input id="test" name="test" type="text" required>
+                <label for="dim">Enter Dimensions of Array *(comma seperated)</label>
+                <input id="dim" name="dim" type="text" required>
+                <label for="min">Minimum Value *</label>
+                <input id="min" name="min" type="text" required>
+                <label for="max">Maximum Value *</label>
+                <input id="max" name="max" type="text" required>
+                <button type="submit" class="btn">Generate</button>
+            </form>
+        </div>
+
+
+        <div class="result">
+            <h3>Output :</h3>
+            <textarea></textarea>
+            <button type="button" class="btn download">Download</button>
+        </div>
+
+        <!-------JS for Toggle Menu------->
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+
+            function menuToggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px"
+                } else {
+                    MenuItems.style.maxHeight = "0px"
+                }
+            }
+        </script>
+    </body>
+</html>
