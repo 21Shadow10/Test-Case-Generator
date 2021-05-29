@@ -1,6 +1,6 @@
 var num = require('../Integer/num');
 
-let nodes = 3;
+let nodes = 6;
 let test = 3 ;
 
 class Tree {
@@ -60,6 +60,10 @@ function UWTree(test, tree_nodes) {
     return result;
 }
 
-// console.log(UWTree(test,nodes));
+console.log("No. of Test Cases: " + test);
+console.log("Number of Nodes: " + nodes);
+console.log("Output: ");
+
+console.log(UWTree(test,nodes));
 
 module.exports = UWTree ;

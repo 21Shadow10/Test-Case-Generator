@@ -36,7 +36,12 @@ function DUGraph(test,dug_nodes,dug_edges){
     return result;
 };
 
-// console.log(DUGraph(test,nodes,edges));
+console.log("No. of Test Cases: " + test);
+console.log("Number of Nodes: " + nodes);
+console.log("Number of Edges: " + edges);
+console.log("Output: ");
+
+console.log(DUGraph(test,nodes,edges));
 
 module.exports = DUGraph ;
 

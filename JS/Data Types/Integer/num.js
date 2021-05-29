@@ -13,4 +13,9 @@ function num(test,min,max) {
 
 module.exports = num ;
 
-//console.log(num(test,min,max)) ;
+// console.log("No. of Test Cases: " + test);
+// console.log("Minimum Value: " + min);
+// console.log("Maximum Value: " + max);
+// console.log("Output: ");
+
+// console.log(num(test,min,max)) ;

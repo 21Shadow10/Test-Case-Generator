@@ -19,6 +19,11 @@ function string(test, size, chars){
     return result;
 };
 
-// console.log(string(test,size,chars)) ;
+console.log("No. of Test Cases: " + test);
+console.log("Size of Output String: " + size);
+console.log("Characters included in Output String: " + chars);
+console.log("Output: ");
+
+console.log(string(test,size,chars)) ;
 
 module.exports = string ;

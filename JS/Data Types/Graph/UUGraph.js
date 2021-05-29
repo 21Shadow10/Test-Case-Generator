@@ -42,6 +42,11 @@ function UUGraph(test, uug_nodes,uug_edges){
     return result;
 }
 
-// console.log(UUGraph(test,nodes,edges));
+console.log("No. of Test Cases: " + test);
+console.log("Number of Nodes: " + nodes);
+console.log("Number of Edges: " + edges);
+console.log("Output: ");
+
+console.log(UUGraph(test,nodes,edges));
 
 module.exports = UUGraph ;

@@ -1,7 +1,7 @@
-var test = 3;
-let dim = '4,1' ;
-let min = 4 ;
-let max = 12 ;
+var test = 2;
+let dim = '3,3' ;
+let min = 3 ;
+let max = 7 ;
 
 const randarrgen=(dim,min,max)=>{
     min = Math.ceil(min);
@@ -29,6 +29,12 @@ function array(test,dim,min,max){
     return result;
 }
 
-// console.log(array(test,dim,min,max)) ;
+console.log("No. of Test Cases: " + test);
+console.log("Dimensions of Array: " + dim)
+console.log("Minimum Value: " + min);
+console.log("Maximum Value: " + max);
+console.log("Output: ");
+
+console.log(array(test,dim,min,max)) ;
 
 module.exports = array ;

@@ -41,6 +41,14 @@ function DWGraph(test,dwg_nodes,dwg_edges,dwg_min_weight,dwg_max_weight){
     return result;
 }
 
-// console.log(DWGraph(test,nodes,edges,min_wt,max_wt));
+console.log("No. of Test Cases: " + test);
+console.log("Number of Nodes: " + nodes);
+console.log("Number of Edges: " + edges);
+console.log("Minimum Weight: " + min_wt);
+console.log("Maximum Weight: " + max_wt);
+console.log("Output: ");
+
+
+console.log(DWGraph(test,nodes,edges,min_wt,max_wt));
 
 module.exports = DWGraph ;

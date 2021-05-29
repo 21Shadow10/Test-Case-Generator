@@ -64,6 +64,12 @@ function WTree(test, tree_nodes,wt_min_weight,wt_max_weight) {
     return result;
 }
 
-// console.log(WTree(test, nodes, min_wt, max_wt)) ;
+console.log("No. of Test Cases: " + test);
+console.log("Number of Nodes: " + nodes);
+console.log("Minimum Weight: " + min_wt);
+console.log("Maximum Weight: " + max_wt);
+console.log("Output: ");
+
+console.log(WTree(test, nodes, min_wt, max_wt)) ;
 
 module.exports = WTree ;
