@@ -30,24 +30,22 @@
                     <option value="wt">Weighted Tree</option>
                 </select>
             </div>
-            <form>
                 <label for="test">Number of Test Cases *</label>
-                <input id="test" name="test" type="text" required>
+                <input id="test" name="test" type="number" required>
                 <label for="nodes">Number of Nodes *</label>
-                <input id="nodes" name="nodes" type="text" required>
+                <input id="nodes" name="nodes" type="number" required>
                 <label for="min_wt" id="l_min"class="hidden">Minimum Weight</label>
-                <input id="min_wt" name="min_wt" type="text" class="hidden">
+                <input id="min_wt" name="min_wt" type="number" class="hidden">
                 <label for="max_wt" id="l_max" class="hidden">Maximum Weight</label>
-                <input id="max_wt" name="max_wt" type="text" class="hidden">
-                <button type="submit" class="btn">Generate</button>
-            </form>
-        </div>
+                <input id="max_wt" name="max_wt" type="number" class="hidden">
+                <button class="btn" id="generate" onclick="uwtgen()">Generate</button>
+            </div>
 
 
         <div class="result">
             <h3>Output :</h3>
-            <textarea></textarea>
-            <button type="button" class="btn download">Download</button>
+            <textarea id="res"></textarea>
+            <button type="button" class="btn download" onclick="saveTextAsFile(res.value,'download.txt')">Download</button>
         </div>
 
         <!-------JS for Toggle Menu------->
@@ -69,12 +67,14 @@
                 let min_wt = document.getElementById("min_wt") ;
                 let l_max = document.getElementById("l_max") ;
                 let max_wt = document.getElementById("max_wt") ;
+                let generate = document.getElementById("generate") ;
 
                 if(value=="wt"){
                     l_min.style.display = "block" ;
                     min_wt.style.display = "block" ;
                     l_max.style.display = "block" ;
                     max_wt.style.display = "block" ;    
+                    generate.setAttribute("onclick","wtgen()") ;
                 }
 
                 else{
@@ -82,8 +82,12 @@
                     min_wt.style.display = "none" ;
                     l_max.style.display = "none" ;
                     max_wt.style.display = "none" ;
+                    generate.setAttribute("onclick","uwtgen()") ;
                 }
             }
         </script>
+        <script src="../JS/Data Types/Tree/UWTree.js" type="text/javascript" ></script>
+        <script src="../JS/Data Types/Tree/WTree.js" type="text/javascript" ></script>
+        <script type="text/javascript" src="../JS/script.js"></script>
     </body>
 </html>

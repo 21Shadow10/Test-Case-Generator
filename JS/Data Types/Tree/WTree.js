@@ -1,11 +1,17 @@
-var randnumgen = require('../Integer/num');
+function num(test,min,max) {
+    let result = '';
+    for(let i=0;i<test;i++){
+        result += Math.floor(Math.random() * (max - min + 1)) + min + '\n' ;
+    }
+    return result ;
+}
 
-let nodes = 4 ;
-let min_wt = 2 ;
-let max_wt = 11;
-let test = 3 ;
+// let nodes = 4 ;
+// let min_wt = 2 ;
+// let max_wt = 11;
+// let test = 3 ;
 
-class Tree {
+class WeightedTree {
     constructor(nodes) {
         this.nodes = nodes;
         this.adj = Array.from({length: nodes}, () => []);
@@ -36,19 +42,19 @@ function shuffle(array) {
 
 function randwtgen(nodes,min_weight,max_weight) {
     let string = "";
-    let t = new Tree(nodes);
+    let t = new WeightedTree(nodes);
     let [root, ...children] = shuffle([...Array(nodes).keys()]);
     let edges = [];
     let a;
     for (let b of children) {
         do {
-            a = randnumgen(1,0, nodes-1); // make zero based
+            a = num(1,0, nodes-1); // make zero based
             a=Number(a) ;
         } while (t.descendants(b).has(a));
         t.addEdge(a, b);
-        edges.push([a, b,randnumgen(1,min_weight,max_weight)]);
+        edges.push([a, b,num(1,min_weight,max_weight)]);
     }
-    string+=edges.join("\n").replace(/,/g,' ');
+    string+=edges.join("\n").replace(/,/g,'        ');
     return string
 }
 
@@ -64,12 +70,33 @@ function WTree(test, tree_nodes,wt_min_weight,wt_max_weight) {
     return result;
 }
 
-console.log("No. of Test Cases: " + test);
-console.log("Number of Nodes: " + nodes);
-console.log("Minimum Weight: " + min_wt);
-console.log("Maximum Weight: " + max_wt);
-console.log("Output: ");
 
-console.log(WTree(test, nodes, min_wt, max_wt)) ;
+function wtgen(){
+    let result1 = "Parent  Child  Weight\n\n" ;
+    let test = parseInt(document.getElementById('test').value) ;
+    let nodes = parseInt(document.getElementById('nodes').value) ;
+    let min_wt = parseInt(document.getElementById('min_wt').value) ;
+    let max_wt = parseInt(document.getElementById('max_wt').value) ;
 
-module.exports = WTree ;
+    if(!min_wt)
+        min_wt = 0 ;
+    if(!max_wt)
+        max_wt = 0 ;
+
+    console.log(test,nodes,min_wt,max_wt) ;
+    result1 += WTree(test,nodes,min_wt,max_wt) ;
+    
+    console.log(result1) ;
+    var txtar = document.getElementById('res') ;
+    txtar.value = result1 ;
+}
+
+// console.log("No. of Test Cases: " + test);
+// console.log("Number of Nodes: " + nodes);
+// console.log("Minimum Weight: " + min_wt);
+// console.log("Maximum Weight: " + max_wt);
+// console.log("Output: ");
+
+// console.log(WTree(test, nodes, min_wt, max_wt)) ;
+
+// module.exports = WTree ;

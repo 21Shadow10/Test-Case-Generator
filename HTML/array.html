@@ -24,24 +24,22 @@
 
 
         <div class="form">
-            <form>
                 <label for="test">Number of Test Cases *</label>
-                <input id="test" name="test" type="text" required>
+                <input id="test" name="test" type="number" required>
                 <label for="dim">Enter Dimensions of Array *(comma seperated)</label>
                 <input id="dim" name="dim" type="text" required>
                 <label for="min">Minimum Value *</label>
-                <input id="min" name="min" type="text" required>
+                <input id="min" name="min" type="number" required>
                 <label for="max">Maximum Value *</label>
-                <input id="max" name="max" type="text" required>
-                <button type="submit" class="btn">Generate</button>
-            </form>
+                <input id="max" name="max" type="number" required>
+                <button class="btn" onclick="arrgen()">Generate</button>
         </div>
 
 
         <div class="result">
             <h3>Output :</h3>
-            <textarea></textarea>
-            <button type="button" class="btn download">Download</button>
+            <textarea id="res"></textarea>
+            <button type="button" class="btn download" onclick="saveTextAsFile(res.value,'download.txt')">Download</button>
         </div>
 
         <!-------JS for Toggle Menu------->
@@ -57,5 +55,8 @@
                 }
             }
         </script>
+
+        <script type="text/javascript" src="../JS/Data Types/Array/array.js"></script>
+        <script type="text/javascript" src="../JS/script.js"></script>
     </body>
 </html>

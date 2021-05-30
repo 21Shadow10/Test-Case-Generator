@@ -1,6 +1,6 @@
-let min = 4 ;
-let max = 9 ;
-let test = 3 ;
+// let min = 4 ;
+// let max = 9 ;
+// let test = 3 ;
 
 
 function num(test,min,max) {
@@ -10,6 +10,20 @@ function num(test,min,max) {
     }
     return result ;
 }
+
+let result ;
+function intgen(){
+    let test = parseInt(document.getElementById('test').value) ;
+    let min = parseInt(document.getElementById('min').value) ;
+    let max = parseInt(document.getElementById('max').value) ;
+    console.log(test,min,max) ;
+    result = num(test,min,max) ;
+    
+    console.log(result) ;
+    var txtar = document.getElementById('res') ;
+    txtar.value = result ;
+}
+
 
 module.exports = num ;
 

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../CSS/style.css" >
         <title>TestCase Generator</title>
+        
     </head>
 
     <body>
@@ -24,22 +25,20 @@
 
 
         <div class="form">
-            <form>
                 <label for="test">Number of Test Cases *</label>
-                <input id="test" name="test" type="text" required>
+                <input id="test" name="test" type="number" required>
                 <label for="min">Minimum Value *</label>
-                <input id="min" name="min" type="text" required>
+                <input id="min" name="min" type="number" required>
                 <label for="max">Maximum Value *</label>
-                <input id="max" name="max" type="text" required>
-                <button type="submit" class="btn">Generate</button>
-            </form>
+                <input id="max" name="max" type="number" required>
+                <button class="btn" onclick="intgen()">Generate</button>
         </div>
 
 
         <div class="result">
             <h3>Output :</h3>
-            <textarea></textarea>
-            <button type="button" class="btn download">Download</button>
+            <textarea id="res"></textarea>
+            <button type="button" class="btn download" onclick="saveTextAsFile(res.value,'download.txt')">Download</button>
         </div>
 
         <!-------JS for Toggle Menu------->
@@ -55,5 +54,8 @@
                 }
             }
         </script>
+
+        <script type="text/javascript" src="../JS/Data Types/Integer/num.js"></script>
+        <script type="text/javascript" src="../JS/script.js"></script>
     </body>
 </html>

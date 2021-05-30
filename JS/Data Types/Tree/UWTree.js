@@ -1,7 +1,13 @@
-var num = require('../Integer/num');
+function num(test,min,max) {
+    let result = '';
+    for(let i=0;i<test;i++){
+        result += Math.floor(Math.random() * (max - min + 1)) + min + '\n' ;
+    }
+    return result ;
+}
 
-let nodes = 6;
-let test = 3 ;
+// let nodes = 6;
+// let test = 3 ;
 
 class Tree {
     constructor(nodes) {
@@ -46,7 +52,7 @@ function randtreegen(nodes) {
         t.addEdge(a, b);
         edges.push([a, b]);
     }
-    string+=edges.join('\n').replace(/,/g,' ');
+    string+=edges.join('\n').replace(/,/g,'        ');
     return string
 }
 
@@ -60,10 +66,23 @@ function UWTree(test, tree_nodes) {
     return result;
 }
 
-console.log("No. of Test Cases: " + test);
-console.log("Number of Nodes: " + nodes);
-console.log("Output: ");
 
-console.log(UWTree(test,nodes));
+function uwtgen(){
+    let result = "Parent  Child\n\n" ;
+    let test = parseInt(document.getElementById('test').value) ;
+    let nodes = parseInt(document.getElementById('nodes').value) ;
+    console.log(test,nodes) ;
+    result += UWTree(test,nodes) ;
+    
+    console.log(result) ;
+    var txtar = document.getElementById('res') ;
+    txtar.value = result ;
+}
 
-module.exports = UWTree ;
+// console.log("No. of Test Cases: " + test);
+// console.log("Number of Nodes: " + nodes);
+// console.log("Output: ");
+
+// console.log(UWTree(test,nodes));
+
+// module.exports = UWTree ;

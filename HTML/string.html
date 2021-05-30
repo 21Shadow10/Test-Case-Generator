@@ -24,22 +24,20 @@
 
 
         <div class="form">
-            <form>
-                <label for="test">Number of Test Cases *</label>
-                <input id="test" name="test" type="text" required>
-                <label for="size">Enter Size of the String *</label>
-                <input id="size" name="size" type="text" required>
-                <label for="chars">Enter the characters of the string</label>
-                <input id="chars" name="chars" type="text">
-                <button type="submit" class="btn">Generate</button>
-            </form>
+            <label for="test">Number of Test Cases *</label>
+            <input id="test" name="test" type="number" required>
+            <label for="size">Enter Size of the String *</label>
+            <input id="size" name="size" type="number" required>
+            <label for="chars">Enter the characters of the string</label>
+            <input id="chars" name="chars" type="text">
+            <button type="submit" class="btn" onclick="strgen()">Generate</button>
         </div>
 
 
         <div class="result">
             <h3>Output :</h3>
-            <textarea></textarea>
-            <button type="button" class="btn download">Download</button>
+            <textarea id="res"></textarea>
+            <button type="button" class="btn download" onclick="saveTextAsFile(res.value,'download.txt')">Download</button>
         </div>
 
         <!-------JS for Toggle Menu------->
@@ -55,5 +53,8 @@
                 }
             }
         </script>
+
+        <script type="text/javascript" src="../JS/Data Types/String/string.js" ></script>
+        <script type="text/javascript" src="../JS/script.js"></script>
     </body>
 </html>
