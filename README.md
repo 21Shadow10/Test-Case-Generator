@@ -6,12 +6,12 @@
  ### 2. String
  ### 3. Array
  ### 4. Tree
- ###    - Weighted Tree
- ###    - Unweighted Tree
+ ####   - Weighted Tree
+ ####   - Unweighted Tree
  ### 5. Graph
- ###    - Undirected Unweighted Graph
- ###    - Directed Unweighted Graph
- ###    - Directed Weighted Graph
+ ####   - Undirected Unweighted Graph
+ ####   - Directed Unweighted Graph
+ ####   - Directed Weighted Graph
 
 
 ## The Project is hosted using Github Pages and is running [here](https://21shadow10.github.io/Test-Case-Generator/HTML/integer.html)
