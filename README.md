@@ -2,7 +2,7 @@
 ### This is a Function Oriented Frontend Website made using **HTML**,**CSS** and **JavaScript**
 
 ## Random Test Cases can be generated for the Following Data Types
-  1. [Integer](./JS/Data Types/Integer/integer.js)
+  1. [Integer](./JS/Data Types/Integer/num.js)
   2. [String](./JS/Data Types/String)
   3. [Array](./JS/Data Types/Array)
   4. [Tree](./JS/Data Types/Tree)
