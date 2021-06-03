@@ -2,13 +2,13 @@
 ### This is a Function Oriented Frontend Website made using **HTML**,**CSS** and **JavaScript**
 
 ## Random Test Cases can be generated for the Following Data Types
-  1. [Integer](./JS/Data Types/Integer/num.js)
-  2. [String](./JS/Data Types/String)
-  3. [Array](./JS/Data Types/Array)
-  4. [Tree](./JS/Data Types/Tree)
+  1. Integer
+  2. String
+  3. Array
+  4. Tree
       - Weighted Tree
       - Unweighted Tree
-  5. [Graph](./JS/Data Types/Graph)
+  5. Graph
       - Undirected Unweighted Graph
       - Directed Unweighted Graph
       - Directed Weighted Graph
