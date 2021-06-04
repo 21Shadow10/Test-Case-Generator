@@ -128,7 +128,7 @@ input{
     margin-left: 0;
 }
 textarea{
-    width: auto;
+    width: 25rem;
     height: 300px ;
     margin-top: 20px;
     font-size: 1.5rem;

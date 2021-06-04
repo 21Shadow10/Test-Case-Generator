@@ -72,7 +72,7 @@ function WTree(test, tree_nodes,wt_min_weight,wt_max_weight) {
 
 
 function wtgen(){
-    let result1 = "Parent  Child Weight\n\n" ;
+    let result1 = "Parent  Child  Weight\n\n" ;
     let test = parseInt(document.getElementById('test').value) ;
     let nodes = parseInt(document.getElementById('nodes').value) ;
     let min_wt = parseInt(document.getElementById('min_wt').value) ;
