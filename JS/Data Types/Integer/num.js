@@ -25,7 +25,7 @@ function intgen(){
 }
 
 
-module.exports = num ;
+// module.exports = num ;
 
 // console.log("No. of Test Cases: " + test);
 // console.log("Minimum Value: " + min);
